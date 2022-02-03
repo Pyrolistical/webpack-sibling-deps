@@ -1,4 +1,3 @@
-// @ts-ignore
 import type { SDKEntry } from "sdk";
 import sdk from "sdk";
 

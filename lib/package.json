@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "prebuild": "rm -rf dist/",
+    "clean": "rm -rf dist/ node_modules/",
+    "prebuild": "npm run clean && npm install",
     "build": "tsc"
   },
   "devDependencies": {
+    "sdk": "file:../sdk",
     "typescript": "4.5.5"
   }
 }

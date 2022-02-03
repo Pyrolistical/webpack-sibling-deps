@@ -1,4 +1,4 @@
-type SDKEntry = () => void
+export type SDKEntry = () => void
 
 const entry: SDKEntry = () => {
   console.log("im sdk");
