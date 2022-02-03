@@ -1,6 +1,12 @@
+// @ts-ignore
+import type { SDKEntry } from "sdk";
 import sdk from "sdk";
 
-export default () => {
+type LibEntry = () => void
+const entry: LibEntry = () => {
   console.log("im lib");
-  sdk();
+  const Sdk: SDKEntry = sdk;
+  Sdk()
 };
+
+export default entry;
