@@ -5,11 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf dist/ node_modules/",
-    "prebuild": "npm run clean && npm install",
+    "install:sdk": "cp -r ../sdk node_modules/ && rm -rf node_modules/sdk/node_modules",
+    "prebuild": "npm run clean && npm install && npm run install:sdk",
     "build": "tsc"
   },
   "devDependencies": {
-    "sdk": "file:../sdk",
     "typescript": "4.5.5"
   }
 }

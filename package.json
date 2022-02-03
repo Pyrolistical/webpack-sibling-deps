@@ -1,14 +1,12 @@
 {
   "name": "webpack-sibling-deps",
   "private": true,
-  "dependencies": {
-    "lib": "file:./lib",
-    "sdk": "file:./sdk"
-  },
   "scripts": {
     "clean": "rm -rf dist/ node_modules/ || true",
     "build:sdk": "cd sdk && npm run build",
+    "postbuild:sdk": "cp -r ./sdk node_modules/ && rm -rf node_modules/sdk/node_modules",
     "build:lib": "cd lib && npm run build",
+    "postbuild:lib": "cp -r ./lib node_modules/ && rm -rf node_modules/lib/node_modules",
     "prebuild": "npm run clean && npm install && npm run build:sdk && npm run build:lib",
     "build": "webpack",
     "prestart": "npm run build",
