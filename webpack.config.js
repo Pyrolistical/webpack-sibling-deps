@@ -3,7 +3,7 @@ const { resolve } = require("path");
 module.exports = {
   mode: "development",
 
-  entry: "./index.js",
+  entry: "./index.ts",
 
   output: {
     path: resolve(__dirname, "dist"),

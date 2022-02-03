@@ -1,5 +1,13 @@
 {
   "name": "sdk",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist/",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "4.5.5"
+  }
 }
