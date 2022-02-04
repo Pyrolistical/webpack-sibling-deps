@@ -1,5 +1,5 @@
-import type { SDKEntry } from "sdk";
-import sdk from "sdk";
+import type { SDKEntry } from "@pyrolistical/webpack-sibling-deps-sdk";
+import sdk from "@pyrolistical/webpack-sibling-deps-sdk";
 
 type LibEntry = () => void
 const entry: LibEntry = () => {

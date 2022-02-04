@@ -3,14 +3,14 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf dist/ node_modules/ || true",
-    "build:sdk": "cd sdk && npm run build",
-    "postbuild:sdk": "cp -r ./sdk node_modules/ && rm -rf node_modules/sdk/node_modules",
-    "build:lib": "cd lib && npm run build",
-    "postbuild:lib": "cp -r ./lib node_modules/ && rm -rf node_modules/lib/node_modules",
-    "prebuild": "npm run clean && npm install && npm run build:sdk && npm run build:lib",
+    "prebuild": "npm run clean && npm install",
     "build": "webpack",
     "prestart": "npm run build",
     "start": "node dist/*.js"
+  },
+  "dependencies": {
+    "@pyrolistical/webpack-sibling-deps-sdk": "0.0.0",
+    "@pyrolistical/webpack-sibling-deps-lib": "0.0.0"
   },
   "devDependencies": {
     "ts-loader": "9.2.6",
